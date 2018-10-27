@@ -1,0 +1,3 @@
+class ChitterApp
+  'test'
+end
