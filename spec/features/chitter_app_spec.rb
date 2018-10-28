@@ -7,4 +7,9 @@ feature 'index page' do
     expect(page).to have_content 'Chitter'
   end
 
+  scenario 'has link to beep page' do
+    visit '/'
+    expect(page).to have_link('Beep!', href: '/beep')
+  end
+
 end
