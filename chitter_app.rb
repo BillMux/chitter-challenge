@@ -10,7 +10,7 @@ class ChitterApp < Sinatra::Base
   end
 
   post '/peep' do
-
+    
   end
 
   run! if app_file == $0
