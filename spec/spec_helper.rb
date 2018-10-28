@@ -1,11 +1,9 @@
-require 'simplecov'
-require 'simplecov-console'
-
+require 'capybara'
 require 'capybara/rspec'
 require 'pg'
+require 'selenium'
 require 'simplecov'
 require 'simplecov-console'
-require 'capybara'
 require 'rspec'
 require './chitter_app'
 

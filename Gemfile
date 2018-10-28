@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
-gem 'rack'
+gem 'rack/showexceptions'
 gem 'rake'
 gem 'selenium'
 gem 'sinatra'
