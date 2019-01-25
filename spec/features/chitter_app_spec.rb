@@ -11,5 +11,4 @@ feature 'index page' do
     visit '/'
     expect(page).to have_link('Peep!', href: '/peep')
   end
-
 end
