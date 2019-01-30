@@ -9,7 +9,11 @@ feature 'peep page' do
     expect(page).to have_content('Your Peep:')
   end
 
-  scenario 'contains an empty text field' do
+  scenario 'contains an empty text field to enter peep text' do
     expect(page).to have_field('peep-text')
+  end
+
+  scenario 'contains a submit button to post peep' do
+    expect(page).to have_button('Peep')
   end
 end
