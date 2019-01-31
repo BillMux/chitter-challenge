@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.5.1'
 
 gem 'bcrypt'
-gem 'capybara'
 gem 'pg'
 gem 'rake'
 gem 'selenium'
@@ -12,6 +11,7 @@ gem 'sinatra'
 gem 'sinatra-base'
 
 group :test do
+  gem 'capybara'
   gem 'rack'
   gem 'rack/showexceptions'
   gem 'rspec'
