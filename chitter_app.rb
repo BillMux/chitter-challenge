@@ -1,6 +1,8 @@
 require 'sinatra/base'
 
 class ChitterApp < Sinatra::Base
+  enable :sessions
+
   get '/' do
     erb :index
   end
@@ -10,7 +12,7 @@ class ChitterApp < Sinatra::Base
   end
 
   post '/peep' do
-    
+
   end
 
   run! if app_file == $0
