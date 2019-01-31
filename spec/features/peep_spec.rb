@@ -16,4 +16,10 @@ feature 'peep page' do
   scenario 'contains a submit button to post peep' do
     expect(page).to have_button('Peep')
   end
+
+  scenario 'shows peeps on index page' do
+    fill_in "peep-text", with: 'test'
+    click_button('Submit')
+    expect(page).to have_content('test')
+  end
 end
