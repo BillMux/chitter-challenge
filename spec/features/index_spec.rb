@@ -12,4 +12,11 @@ feature 'index page' do
   scenario 'has link to peep page' do
     expect(page).to have_link('Peep!', href: '/peep')
   end
+
+  scenario 'shows peeps on index page' do
+    # fill_in "peep-text", with: 'test'
+    # click_button('Peep')
+    expect(page).to have_content('test')
+    expect(page).to have_content('test, again')
+  end
 end
