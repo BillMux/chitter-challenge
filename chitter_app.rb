@@ -1,13 +1,13 @@
+require 'dotenv/load'
+require_relative 'data_mapper_setup'
+require_relative 'lib/peep'
 require 'sinatra/base'
 
 class ChitterApp < Sinatra::Base
   enable :sessions
 
   get '/' do
-    @peeps = [
-      'test',
-      'test, again'
-    ]
+    @peeps = Peep.all
     erb :index
   end
 
@@ -16,6 +16,7 @@ class ChitterApp < Sinatra::Base
   end
 
   post '/peep' do
+    Peep.create(text: params['peep-text'])
     redirect '/'
   end
 
