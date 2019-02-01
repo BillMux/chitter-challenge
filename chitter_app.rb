@@ -4,6 +4,10 @@ class ChitterApp < Sinatra::Base
   enable :sessions
 
   get '/' do
+    @peeps = [
+      'test',
+      'test, again'
+    ]
     erb :index
   end
 
@@ -12,7 +16,7 @@ class ChitterApp < Sinatra::Base
   end
 
   post '/peep' do
-
+    redirect '/'
   end
 
   run! if app_file == $0
