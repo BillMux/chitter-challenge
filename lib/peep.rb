@@ -3,5 +3,4 @@ class Peep
 
   property :id, Serial
   property :text, String
-
 end
