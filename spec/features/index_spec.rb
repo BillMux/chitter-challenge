@@ -14,9 +14,9 @@ feature 'index page' do
   end
 
   scenario 'shows peeps on index page' do
-    # fill_in "peep-text", with: 'test'
-    # click_button('Peep')
+    click_link('Peep!')
+    fill_in "peep-text", with: 'test'
+    click_button('Peep')
     expect(page).to have_content('test')
-    expect(page).to have_content('test, again')
   end
 end
