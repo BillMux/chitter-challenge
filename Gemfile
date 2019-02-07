@@ -7,12 +7,11 @@ ruby '2.5.1'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'dotenv'
+gem 'pg'
 gem 'sinatra'
 
 group :test do
   gem 'capybara'
-  # gem 'rack'
-  # gem 'rack/showexceptions'
   gem 'rspec'
   gem 'rubocop', '0.56.0'
   gem 'simplecov', require: false
