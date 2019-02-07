@@ -1,7 +1,10 @@
-require 'spec_helper'
+require_relative '../spec_helper'
+require 'pg'
 
 feature 'index page' do
   before(:each) do
+    connection = PG.connect(dbname: 'chitter_test')
+    connection.exec('TRUNCATE TABLE peeps')
     visit '/'
   end
 
@@ -13,7 +16,7 @@ feature 'index page' do
     expect(page).to have_link('Peep!', href: '/peep')
   end
 
-  scenario 'shows peeps on index page' do
+  scenario 'shows peeps' do
     click_link('Peep!')
     fill_in "peep-text", with: 'test'
     click_button('Peep')
