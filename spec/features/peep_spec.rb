@@ -28,4 +28,13 @@ feature 'peep page' do
     click_button('Peep')
     expect(page).to have_content('test123')
   end
+
+  scenario 'peeps display in reverse chronological order' do
+    fill_in "peep-text", with: 'test1'
+    click_button('Peep')
+    click_link('Peep!')
+    fill_in "peep-text", with: 'test2'
+    expect(page).to have_content('test1')
+    expect(page).to have_content('test2')
+  end
 end
