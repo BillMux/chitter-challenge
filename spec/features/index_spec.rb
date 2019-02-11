@@ -3,9 +3,12 @@ require 'pg'
 
 feature 'index page' do
   before(:each) do
-    connection = PG.connect(dbname: 'chitter_test')
-    connection.exec('TRUNCATE TABLE peeps')
+    @connection = PG.connect(dbname: 'chitter_test')
     visit '/'
+  end
+
+  after(:each) do
+    @connection.exec('TRUNCATE TABLE peeps')
   end
 
   scenario 'contains a header' do
