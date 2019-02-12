@@ -4,11 +4,8 @@ require 'pg'
 feature 'peep page' do
   before(:each) do
     @connection = PG.connect(dbname: 'chitter_test')
-    visit('/peep')
-  end
-
-  after(:each) do
     @connection.exec('TRUNCATE TABLE peeps')
+    visit('/peep')
   end
 
   scenario 'contains a header' do
@@ -29,7 +26,7 @@ feature 'peep page' do
     expect(page).to have_content('test123')
   end
 
-  scenario 'peeps display in reverse chronological order' do
+  scenario 'shows multiple peeps' do
     fill_in "peep-text", with: 'test1'
     click_button('Peep')
     click_link('Peep!')

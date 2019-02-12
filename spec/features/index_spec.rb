@@ -7,10 +7,6 @@ feature 'index page' do
     visit '/'
   end
 
-  after(:each) do
-    @connection.exec('TRUNCATE TABLE peeps')
-  end
-
   scenario 'contains a header' do
     expect(page).to have_content('Chitter')
   end
