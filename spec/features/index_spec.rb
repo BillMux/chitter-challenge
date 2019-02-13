@@ -3,8 +3,8 @@ require 'pg'
 
 feature 'index page' do
   connection = PG.connect(dbname: 'chitter_test')
-  connection.exec('TRUNCATE TABLE peeps')
-  
+  connection.exec('TRUNCATE peeps;')
+
   before(:each) do
     visit '/'
   end
