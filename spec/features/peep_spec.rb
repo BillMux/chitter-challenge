@@ -2,9 +2,10 @@ require_relative '../spec_helper'
 require 'pg'
 
 feature 'peep page' do
+  connection = PG.connect(dbname: 'chitter_test')
+  connection.exec('TRUNCATE TABLE peeps')
+
   before(:each) do
-    @connection = PG.connect(dbname: 'chitter_test')
-    @connection.exec('TRUNCATE TABLE peeps')
     visit('/peep')
   end
 
