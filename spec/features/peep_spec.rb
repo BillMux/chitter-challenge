@@ -29,6 +29,7 @@ feature 'peep page' do
     click_button('Peep')
     click_link('Peep!')
     fill_in "peep-text", with: 'test2'
+    click_button('Peep')
     expect(page).to have_content('test1')
     expect(page).to have_content('test2')
   end
