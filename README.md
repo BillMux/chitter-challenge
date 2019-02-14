@@ -10,6 +10,8 @@ A Twitter clone. Users should be able to make public posts (peeps) that others c
 
 2. Run the app: `ruby chitter_app.rb`
 
+3. Visit the app in a browser [here](localhost:4567)
+
 ## User Stories:
 
 ```
