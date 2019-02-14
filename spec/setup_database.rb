@@ -1,4 +1,4 @@
 def setup_database
-  connection = PG.connect(dbname: 'chitter_test')
-  connection.exec('TRUNCATE peeps;')
+  connection = DataMapper.setup(:default, "postgres://localhost:5432/chitter_test")
+  connection.execute('TRUNCATE peeps;')
 end
