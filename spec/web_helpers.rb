@@ -1,7 +1,6 @@
 def post_one_peep
   fill_in "peep-text", with: 'test1'
   click_button('Peep')
-  click_link('Peep!')
 end
 
 def post_two_peeps
