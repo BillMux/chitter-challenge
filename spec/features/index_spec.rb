@@ -24,6 +24,12 @@ feature 'index page' do
   scenario 'shows peeps in reverse chronological order' do
     click_link('Peep!')
     post_two_peeps
-    expect(page).to have_content("test2 test1")
+    expect(page).to have_content('test2 test1')
+  end
+
+  scenario 'displays time of peeps' do
+    click_link 'Peep!'
+    post_one_peep
+    expect(page).to have_content(Time.now.strftime("%l:%M%P, %e %b"))
   end
 end
