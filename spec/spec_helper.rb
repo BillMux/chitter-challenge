@@ -19,6 +19,6 @@ SimpleCov.start
 
 RSpec.configure do |config|
   config.before(:suite) do
-    setup_database
+    setup_database_and_clear
   end
 end
