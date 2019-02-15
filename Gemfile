@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}" }
 
 ruby '2.5.1'
 
+gem 'bcrypt'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'dotenv'
