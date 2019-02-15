@@ -3,7 +3,6 @@
 <h2><a href="/peep">Peep!</a></h2>
 <ul>
   <% @peeps.each do |peep| %>
-    <li><%= peep.text %></li>
-    <li><%= peep.time %></li>
+    <li><%= peep.text %> - <em><%= peep.time %></em></li>
   <% end %>
 </ul>
