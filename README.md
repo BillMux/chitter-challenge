@@ -1,6 +1,6 @@
 # Chitter App
 
---INCOMPLETE--
+--WORK IN PROGRESS--
 
 A Twitter clone. Users should be able to make public posts (peeps) that others can see, in reverse chronological order, along with the date and time of the post.
 
@@ -10,7 +10,15 @@ A Twitter clone. Users should be able to make public posts (peeps) that others c
 
 2. Run the app: `ruby chitter_app.rb`
 
-3. Visit the app: `localhost:4567`
+3. Visit the app in a browser: `localhost:4567`
+
+## Using the app:
+
+You can post a "peep" by clicking the "Peep!" link. Type your peep into the field provided, then press return or click the "Submit" button. Your peep will appear on the homepage with a timestamp.
+
+## Tests:
+
+To run the tests, `cd` to the project root and run `rspec`.
 
 ## User Stories:
 
